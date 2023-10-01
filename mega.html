@@ -16,6 +16,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clickable Window</title>
+<style>
+  .popup-container {
+    display: none;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .show-popup {
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <script>
+    setTimeout(function() {
+      document.getElementById("popup").classList.add("show-popup");
+    }, 5000);
+
+    setTimeout(function() {
+      document.getElementById("popup").classList.remove("show-popup");
+    }, 25000);
+  </script>
+  
+  <div id="popup" class="popup-container">
+    <p>Click here for the old Friv®!</p>
+    <a href="https://www.frivclassic.com">Click me to head to the old Friv®!</a>
+  </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Under Development</title>
 <style>
   .under-development {

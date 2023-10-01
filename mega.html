@@ -56,6 +56,61 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expandable Text</title>
+<style>
+  .expandable-container {
+    background-color: red;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+  }
+  .expandable-content {
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <div class="expandable-container" onclick="toggleExpandableText()">
+    Help with Flash | Click here
+  </div>
+  <div id="expandable-text" class="expandable-content">
+    <p>Since flash was deprecated in 2021, here are some ways you can activate it:</p>
+    <p>For Those who use old versions of Chrome or Edge:</p>
+    <ol>
+      <li>Click the pop-up that says "Flash is blocked on this site"</li>
+      <li>Go on settings and activate flash</li>
+      <li>Reload the page (Game might load anyway so you can ignore this step)</li>
+    </ol>
+    <p>Please be reminded that every time you have to boot up chrome, you have to do this again. And we really do not recommend using older browser or even flash in general.</p>
+    <p>For those who use new versions of browsers:</p>
+    <ol>
+      <li>Go to the chrome web store</li>
+      <li>Search for Ruffle</li>
+      <li>Download it</li>
+      <li>Test flash using <a href="https://www.ultrasounds.com">ultrasounds.com</a></li>
+    </ol>
+    <p>Note that Ruffle has limited support for Actionscript 3.</p>
+    <p>Cherish these games like how you used to.</p>
+    <p>FrivMega® 2009-2023</p>
+  </div>
+
+  <script>
+    function toggleExpandableText() {
+      var expandableText = document.getElementById("expandable-text");
+      if (expandableText.style.display === "none") {
+        expandableText.style.display = "block";
+      } else {
+        expandableText.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
 
 
 <!DOCTYPE html>

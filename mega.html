@@ -179,3 +179,37 @@
   <p>Copyright 2009-2023.</p>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visitor Counter</title>
+</head>
+<body>
+  <div id="visitCounter"></div>
+  <div id="deviceType"></div>
+
+  <script>
+    // Visitor Counter
+    if (localStorage.getItem("visitCount") === null) {
+      localStorage.setItem("visitCount", 1);
+    } else {
+      let visitCount = parseInt(localStorage.getItem("visitCount"));
+      visitCount += 1;
+      localStorage.setItem("visitCount", visitCount);
+    }
+
+    // Device Type
+    let deviceType = "Computer";
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      deviceType = "Mobile Phone";
+    }
+
+    // Displaying Results
+    document.getElementById("visitCounter").innerHTML = "You have visited this page about " + localStorage.getItem("visitCount") + " times";
+    document.getElementById("deviceType").innerHTML = "You are using a " + deviceType;
+  </script>
+</body>
+</html>
